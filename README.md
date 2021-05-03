@@ -1,35 +1,31 @@
-# finalproject
+## ¡Bienvenido al Dosificador de medicamentos inteligente!
 
-A Particle project named finalproject
+Cada proyecto de Particle se compone de 3 elementos importantes que verá que se han creado en el directorio de su proyecto para el proyecto final.
 
-## Welcome to your project!
+#### Carpeta ```/ src```:
+Esta es la carpeta de origen que contiene los archivos de firmware para su proyecto. * No * debe cambiarse el nombre.
+Todo lo que esté en esta carpeta cuando compile su proyecto se enviará a nuestro servicio de compilación y se compilará en un binario de firmware para el dispositivo Particle al que se ha dirigido.
 
-Every new Particle project is composed of 3 important elements that you'll see have been created in your project directory for finalproject.
+Si su aplicación contiene varios archivos, todos deben incluirse en la carpeta `src`. Si su firmware depende de las bibliotecas de partículas, esas dependencias se especifican en el archivo `project.properties` al que se hace referencia a continuación.
 
-#### ```/src``` folder:  
-This is the source folder that contains the firmware files for your project. It should *not* be renamed. 
-Anything that is in this folder when you compile your project will be sent to our compile service and compiled into a firmware binary for the Particle device that you have targeted.
+#### Archivo ```.ino```:
+Este archivo es el firmware que se ejecutará como la aplicación principal en su dispositivo Particle. Contiene una función `setup ()` y `loop ()`, y se puede escribir en Wiring o C / C ++. Para obtener más información sobre el uso de la API de firmware de Particle para crear firmware para su dispositivo Particle, consulte la sección [Referencia de firmware] (https://docs.particle.io/reference/firmware/) de la documentación de Particle.
 
-If your application contains multiple files, they should all be included in the `src` folder. If your firmware depends on Particle libraries, those dependencies are specified in the `project.properties` file referenced below.
+#### Archivo ```project.properties```:
+Este es el archivo que especifica el nombre y el número de versión de las bibliotecas de las que depende su proyecto. Las dependencias se agregan automáticamente a su archivo `project.properties` cuando agrega una biblioteca a un proyecto usando el comando` partículas biblioteca agregar` en la CLI o agrega una biblioteca en el IDE de escritorio.
 
-#### ```.ino``` file:
-This file is the firmware that will run as the primary application on your Particle device. It contains a `setup()` and `loop()` function, and can be written in Wiring or C/C++. For more information about using the Particle firmware API to create firmware for your Particle device, refer to the [Firmware Reference](https://docs.particle.io/reference/firmware/) section of the Particle documentation.
+## Agregar archivos adicionales a su proyecto
 
-#### ```project.properties``` file:  
-This is the file that specifies the name and version number of the libraries that your project depends on. Dependencies are added automatically to your `project.properties` file when you add a library to a project using the `particle library add` command in the CLI or add a library in the Desktop IDE.
+#### Proyectos con múltiples fuentes
+Si desea agregar archivos adicionales a su aplicación, debe agregarlos a la carpeta `/ src`. Todos los archivos de la carpeta `/ src` se enviarán a la nube de partículas para producir un binario compilado.
 
-## Adding additional files to your project
+#### Proyectos con bibliotecas externas
+Si su proyecto incluye una biblioteca que no se ha registrado en el sistema de bibliotecas de partículas, debe crear una nueva carpeta llamada `/ lib / <nombredebiblioteca> / src` en` / <directorio del proyecto> `y agregar el` .h`, Archivos `.cpp` &` library.properties` para su biblioteca allí. Lea la [Guía de bibliotecas de firmware] (https://docs.particle.io/guide/tools-and-features/libraries/) para obtener más detalles sobre cómo desarrollar bibliotecas. Tenga en cuenta que todo el contenido de la carpeta y subcarpetas `/ lib` también se enviará a la nube para su compilación.
 
-#### Projects with multiple sources
-If you would like add additional files to your application, they should be added to the `/src` folder. All files in the `/src` folder will be sent to the Particle Cloud to produce a compiled binary.
+## Compilando tu proyecto
 
-#### Projects with external libraries
-If your project includes a library that has not been registered in the Particle libraries system, you should create a new folder named `/lib/<libraryname>/src` under `/<project dir>` and add the `.h`, `.cpp` & `library.properties` files for your library there. Read the [Firmware Libraries guide](https://docs.particle.io/guide/tools-and-features/libraries/) for more details on how to develop libraries. Note that all contents of the `/lib` folder and subfolders will also be sent to the Cloud for compilation.
+Cuando esté listo para compilar su proyecto, asegúrese de tener seleccionado el objetivo de dispositivo de partículas correcto y ejecute `compilación de partículas <plataforma>` en la CLI o haga clic en el botón Compilar en el IDE de escritorio. Los siguientes archivos de la carpeta de su proyecto se enviarán al servicio de compilación:
 
-## Compiling your project
-
-When you're ready to compile your project, make sure you have the correct Particle device target selected and run `particle compile <platform>` in the CLI or click the Compile button in the Desktop IDE. The following files in your project folder will be sent to the compile service:
-
-- Everything in the `/src` folder, including your `.ino` application file
-- The `project.properties` file for your project
-- Any libraries stored under `lib/<libraryname>/src`
+- Todo en la carpeta `/ src`, incluido el archivo de aplicación `.ino`
+- El archivo `project.properties` para su proyecto
+- Cualquier biblioteca almacenada en `lib / <libraryname> / src`
