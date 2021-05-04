@@ -16,3 +16,10 @@ Este es el archivo que especifica el nombre y el número de versión de las bibl
 ![alt text](https://github.com/WilberRojas/IoT_Dosificador/blob/main/ProyectoFinal_esquem%C3%A1tico.png)
 
 NOTA: Es necesario el uso de dos fuentes de alimentacion DC, tratar de alimentar el circuito con el VCC de la placa Argon no sera sufuciente debido al uso de multiples motores.
+
+## Prototipo en SolidWorks:
+
+![alt text](https://github.com/WilberRojas/IoT_Dosificador/blob/main/SolidCompleto.png)
+
+Cada pastilla necesita un diseño personalizado en los tubos del mecanismo del dispensador
+
