@@ -1,5 +1,7 @@
 ## ¡Bienvenido al Dosificador de medicamentos inteligente!
 
+![alt text](https://github.com/WilberRojas/IoT_Dosificador/blob/main/ProyectoFinal_esquem%C3%A1tico.png)
+
 Cada proyecto de Particle se compone de 3 elementos importantes que se han creado en el directorio para el proyecto final.
 
 #### Carpeta ```/ src```:
