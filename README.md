@@ -8,8 +8,6 @@ Cada pastilla necesita un diseño personalizado en los tubos del mecanismo del d
 
 ### Mecanismo de las Pastillas
 
-![alt text](https://github.com/WilberRojas/IoT_Dosificador/blob/main/mecanismoServo.png)
-
 ![alt text](https://github.com/WilberRojas/IoT_Dosificador/blob/main/mecanismo_pastillas.gif)
 
 ### Mecanismo del Azucar
