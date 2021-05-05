@@ -20,7 +20,7 @@ Cada pastilla necesita un diseño personalizado en los tubos del mecanismo del d
 
 NOTA: Es necesario el uso de dos fuentes de alimentacion DC, tratar de alimentar el circuito con el VCC de la placa Argon no sera sufuciente debido al uso de multiples motores.
 
-##Codigo
+## Codigo
 
 #### Carpeta ```/src```:
 Esta es la carpeta de origen que contiene los archivos de firmware para el proyecto. Todo lo que esté en esta carpeta se compilará en un binario de firmware para el dispositivo Particle.
