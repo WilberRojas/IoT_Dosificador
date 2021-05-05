@@ -1,35 +1,34 @@
-# finalproject
+# Dosificador de medicamentos inteligente
 
-A Particle project named finalproject
+## Prototipo en SolidWorks:
 
-## Welcome to your project!
+![alt text](https://github.com/WilberRojas/IoT_Dosificador/blob/main/SolidCompleto.png)
 
-Every new Particle project is composed of 3 important elements that you'll see have been created in your project directory for finalproject.
+Cada pastilla necesita un diseño personalizado en los tubos del mecanismo del dispensador
 
-#### ```/src``` folder:  
-This is the source folder that contains the firmware files for your project. It should *not* be renamed. 
-Anything that is in this folder when you compile your project will be sent to our compile service and compiled into a firmware binary for the Particle device that you have targeted.
+### Mecanismo de las Pastillas
 
-If your application contains multiple files, they should all be included in the `src` folder. If your firmware depends on Particle libraries, those dependencies are specified in the `project.properties` file referenced below.
+![alt text](https://github.com/WilberRojas/IoT_Dosificador/blob/main/mecanismo_pastillas.gif)
 
-#### ```.ino``` file:
-This file is the firmware that will run as the primary application on your Particle device. It contains a `setup()` and `loop()` function, and can be written in Wiring or C/C++. For more information about using the Particle firmware API to create firmware for your Particle device, refer to the [Firmware Reference](https://docs.particle.io/reference/firmware/) section of the Particle documentation.
+### Mecanismo del Azucar
 
-#### ```project.properties``` file:  
-This is the file that specifies the name and version number of the libraries that your project depends on. Dependencies are added automatically to your `project.properties` file when you add a library to a project using the `particle library add` command in the CLI or add a library in the Desktop IDE.
+![alt text](https://github.com/WilberRojas/IoT_Dosificador/blob/main/EnsamblajePowderDispenser.gif)
 
-## Adding additional files to your project
+## Diagrama del circuito:
 
-#### Projects with multiple sources
-If you would like add additional files to your application, they should be added to the `/src` folder. All files in the `/src` folder will be sent to the Particle Cloud to produce a compiled binary.
+![alt text](https://github.com/WilberRojas/IoT_Dosificador/blob/main/ProyectoFinal_esquem%C3%A1tico.png)
 
-#### Projects with external libraries
-If your project includes a library that has not been registered in the Particle libraries system, you should create a new folder named `/lib/<libraryname>/src` under `/<project dir>` and add the `.h`, `.cpp` & `library.properties` files for your library there. Read the [Firmware Libraries guide](https://docs.particle.io/guide/tools-and-features/libraries/) for more details on how to develop libraries. Note that all contents of the `/lib` folder and subfolders will also be sent to the Cloud for compilation.
+NOTA: Es necesario el uso de dos fuentes de alimentacion DC, tratar de alimentar el circuito con el VCC de la placa Argon no sera sufuciente debido al uso de multiples motores.
 
-## Compiling your project
+## Codigo
 
-When you're ready to compile your project, make sure you have the correct Particle device target selected and run `particle compile <platform>` in the CLI or click the Compile button in the Desktop IDE. The following files in your project folder will be sent to the compile service:
+#### Carpeta ```/src```:
+Esta es la carpeta de origen que contiene los archivos de firmware para el proyecto. Todo lo que esté en esta carpeta se compilará en un binario de firmware para el dispositivo Particle.
 
-- Everything in the `/src` folder, including your `.ino` application file
-- The `project.properties` file for your project
-- Any libraries stored under `lib/<libraryname>/src`
+#### Archivo ```.ino```:
+Este archivo es el firmware que se ejecutará como la aplicación principal en su dispositivo Particle. Contiene una función `setup ()` y `loop ()`, y se puede escribir en Wiring o C / C ++. En caso de replica solo de deberá copiar el contenido de este archivo e importar las librerias dentro.
+
+#### Archivo ```project.properties```:
+Este es el archivo que especifica el nombre y el número de versión de las bibliotecas de las que depende el proyecto. Las dependencias se agregan automáticamente al archivo `project.properties` cuando agrega una biblioteca a un proyecto usando el comando `Particle: Install Library` en el IDE de escritorio.
+
+
