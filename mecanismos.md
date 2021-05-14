@@ -1,4 +1,4 @@
-### Todos los mecanismos se encuentran en la capeta ![Archivos .SLDPRT](https://github.com/WilberRojas/IoT_Dosificador/tree/main/Archivos%20.SLDPRT) [GitHub](http://github.com)
+### Todos los mecanismos se encuentran en la capeta [Archivos .SLDPRT](https://github.com/WilberRojas/IoT_Dosificador/tree/main/Archivos%20.SLDPRT)
 
 ## Mecanismo de las Pastillas
 
