@@ -27,7 +27,7 @@ Puede descargar el archivo .fzz aqui: [Diagrama_electronico.fzz](https://github.
 
 ![alt text](https://github.com/WilberRojas/IoT_Dosificador/blob/main/Circuito.png)
 
-NOTA: Es necesario el uso de dos fuentes de alimentacion DC, tratar de alimentar el circuito con el VCC de la placa Argon no sera sufuciente debido al uso de multiples motores.
+NOTA: Es necesario el uso de dos fuentes de alimentacion DC, no es posible alimentar el circuito solo con el VCC de salida la placa Argon debido al uso de multiples motores que requieren gran amperaje.
 
 ## 4. Codigo
 
